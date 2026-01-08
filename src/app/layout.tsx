@@ -10,7 +10,7 @@ export default function RootLayout({ children }: {children: React.ReactNode}) {
   return (
     <html lang="en">
       <body className=" text-white font-inter">
-        <GalaxyBg />
+        {/* <GalaxyBg /> */}
         {children}
       </body>
     </html>

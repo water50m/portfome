@@ -32,5 +32,23 @@ body {
 }
 
 section {
-  padding-top: 120px;
+  padding-top: 60px;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  /* ทำให้มั่นใจว่า Browser จะ Print สีพื้นหลังออกมาด้วย */
+  @media print {
+    body {
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    /* ซ่อน scrollbar เวลาปริ้น */
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  }
 }

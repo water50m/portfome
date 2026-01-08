@@ -7,7 +7,14 @@ export default function ProjectCard() {
     {name: "Database internship at MedSci",
      description: "A website that stores internship information for students in the Faculty of Medical Sciences and shows internship locations on a map.",
      imageUrl: "/images/medsciWeb.png",
-     gitHub: ""
+     gitHub: "https://github.com/water50m/database_mesci",
+     developmentStatus: "ใช้งานจริงแล้ว <= แก้ไขและพัฒนาเพิ่มเติมตาม requirement ของทางมหาวิทยาลัย"
+    },    
+    {name: "Analysis-News",
+     description: "A project that uses AI to predict stocks using information from the news of that day and some indicators. The predictions are then sent to users close to the time the stock market opens.",
+     imageUrl: "",
+     gitHub: "https://github.com/water50m/Analysis-News",
+     developmentStatus: "กำลังพัฒนา <= 1. ใช้ AI หลากหลายตัวในการวิเคราะห์ และตรวจสอบผลลัพของกันและกัน 2. มีงานวิจัยที่ให้ ai จากแต่ละเจ้าว แข่งกัน trade ต้องใช้เวลาค้นคว้างานวิจัยและปรับใช้กับโปรเจคนี้"
     }
     ]; 
   return (
@@ -31,8 +38,8 @@ export default function ProjectCard() {
                     <p className="text-gray-600 dark:text-gray-400 mt-2">
                        {project.description}
                     </p>
-                    <a className="text-gray-600 dark:text-gray-400 mt-2">
-                       {project.gitHub}
+                    <a className="text-gray-600 dark:text-gray-400 mt-2" href={project.gitHub} target="_blank" rel="noopener noreferrer">
+                        GitHub Repository
                     </a>
                     </div>
 
