@@ -4,12 +4,18 @@ import { resumeData } from "@/data/resume-data";
 import { Printer, MapPin, Mail, Phone, Github, Globe, Linkedin, ExternalLink, Workflow, Image as ImageIcon} from "lucide-react";
 import Link from "next/link"; 
 import MermaidChart from "@/components/MermaidChart"
+import { useParams } from "next/navigation";
 
 export default function ResumePage() {
+
+    const params = useParams(); 
+    // @ts-ignore (Bypass type check for demo simplicity)
+    const project = caseStudies.find((p) => p.position === params.position);
+    
   const handlePrint = () => {
     window.print();
   };
-  const special_summary = "AI & Automation Engineer Developer specialized in building intelligent workflows using Multi-Provider LLMs (Gemini, GPT-4) and Computer Vision. Experienced in orchestrating automated pipelines with GitHub Actions and integrating AI inference into real-time applications. Proficient in Python-based ecosystems, optimizing token usage for cost-efficiency, and implementing feedback loops for model accuracy improvement.";
+  const special_summary = project.summary;
 
   return (
     <div className="min-h-screen bg-gray-50 py-8 print:bg-white print:p-0">
