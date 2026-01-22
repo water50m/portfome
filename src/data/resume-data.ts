@@ -12,7 +12,7 @@ export const resumeData = {
     portfolio: "🔴 [your-portfolio-url.com]",
   },
   summary:
-    "Innovative Developer specializing in **AI Computer Vision** and **System Infrastructure**. Experienced in building end-to-end solutions, from training AI models to deploying scalable web applications on **Linux-based Home Labs**. Passionate about self-hosting, optimizing server performance, and solving complex network challenges.",
+    "Full-Stack AI Engineer & Infrastructure Specialist Innovative Developer with expertise in AI Solutions (Computer Vision & LLMs) and Real-time Data Visualization. Experienced in engineering high-performance web systems, from rendering complex LiDAR/AMR dashboards to orchestrating automated trading workflows using Multi-Provider LLMs. Deeply skilled in deploying secure, enterprise-grade infrastructure on Linux environments, optimizing server performance, and solving complex network challenges.",
   
   skills: [
     
@@ -91,7 +91,7 @@ export const resumeData = {
     },
     {
       title: "AI-Powered Stock Sentiment & Prediction Bot",
-      link: "", 
+      link: "/project/Analysis-news", 
       github: "https://github.com/water50m/Analysis-News",
       tech: ["Python", "GitHub Actions", "Gemini / OpenAI", "Supabase", "Line API"],
       highlight: true,
