@@ -16,6 +16,7 @@ export default function ResumePage() {
   const handlePrint = () => {
     window.print();
   };
+  
 
   if (!project) return <div className="p-10 text-center">not found</div>;
 
@@ -93,7 +94,7 @@ export default function ResumePage() {
                  {resumeData.personalInfo.portfolio && (
                    <a href={`https://${resumeData.personalInfo.portfolio}`} target="_blank" className="flex items-center gap-1.5 text-slate-500 hover:text-blue-600 transition-colors">
                       <Globe size={14} /> 
-                      <span>Portfolio: https://pflo.gotzillax.online</span>
+                      <span>Portfolio: https://portfome-olive.vercel.app/</span>
                    </a>
                 )}
             </div>
