@@ -8,9 +8,14 @@ import { redirect } from 'next/navigation';
 export default function Component() {
   redirect('/resume');
   return (
-    
+      <div>
       <GalaxyBg />
+      {/* <Hero />
+      <SkillOrbit />
+      <ProjectCard /> */}
+      </div>
 
     
   );
 }
+
