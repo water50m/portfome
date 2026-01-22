@@ -72,16 +72,17 @@ export default function ResumePage() {
                       <span>{resumeData.personalInfo.github.split('/').pop()}</span>
                    </a>
                 )}
-                {resumeData.personalInfo.linkedin && (
+                {/* {resumeData.personalInfo.linkedin && (
                    <a href={`https://${resumeData.personalInfo.linkedin}`} target="_blank" className="flex items-center gap-1.5 text-slate-500 hover:text-blue-700 transition-colors">
                       <Linkedin size={14} /> 
                       <span>LinkedIn</span>
                    </a>
-                )}
+                )} */}
                  {resumeData.personalInfo.portfolio && (
                    <a href={`https://${resumeData.personalInfo.portfolio}`} target="_blank" className="flex items-center gap-1.5 text-slate-500 hover:text-blue-600 transition-colors">
                       <Globe size={14} /> 
-                      <span>Portfolio</span>
+                      <span>Portfolio: https://pflo.gotzillax.online</span>
+
                    </a>
                 )}
             </div>

@@ -5,17 +5,22 @@ import { Printer, MapPin, Mail, Phone, Github, Globe, Linkedin, ExternalLink, Wo
 import Link from "next/link"; 
 import MermaidChart from "@/components/MermaidChart"
 import { useParams } from "next/navigation";
+import { Specialist } from "@/data/Personas"
 
 export default function ResumePage() {
 
     const params = useParams(); 
     // @ts-ignore (Bypass type check for demo simplicity)
-    const project = caseStudies.find((p) => p.position === params.position);
+    const project = Specialist.find((p) => p.position === params.position);
     
   const handlePrint = () => {
     window.print();
   };
+
+  if (!project) return <div className="p-10 text-center">not found</div>;
+
   const special_summary = project.summary;
+  
 
   return (
     <div className="min-h-screen bg-gray-50 py-8 print:bg-white print:p-0">
@@ -79,16 +84,16 @@ export default function ResumePage() {
                       <span>{resumeData.personalInfo.github.split('/').pop()}</span>
                    </a>
                 )}
-                {resumeData.personalInfo.linkedin && (
+                {/* {resumeData.personalInfo.linkedin && (
                    <a href={`https://${resumeData.personalInfo.linkedin}`} target="_blank" className="flex items-center gap-1.5 text-slate-500 hover:text-blue-700 transition-colors">
                       <Linkedin size={14} /> 
                       <span>LinkedIn</span>
                    </a>
-                )}
+                )} */}
                  {resumeData.personalInfo.portfolio && (
                    <a href={`https://${resumeData.personalInfo.portfolio}`} target="_blank" className="flex items-center gap-1.5 text-slate-500 hover:text-blue-600 transition-colors">
                       <Globe size={14} /> 
-                      <span>Portfolio</span>
+                      <span>Portfolio: https://pflo.gotzillax.online</span>
                    </a>
                 )}
             </div>
