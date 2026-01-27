@@ -31,9 +31,6 @@ body {
   padding-bottom: 120px;
 }
 
-section {
-  padding-top: 60px;
-}
 
 @tailwind base;
 @tailwind components;

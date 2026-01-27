@@ -167,6 +167,7 @@ export default function ResumePage() {
                         title="View Source Code"
                       >
                         <Github size={18} /> {/* เพิ่มขนาดนิดนึงเพื่อให้เห็นชัดขึ้นเมื่ออยู่ไกล */}
+                        {`https://${project.github}`}
                       </Link>
                     )}
                   </div>

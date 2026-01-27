@@ -1,149 +1,282 @@
-"use client";
-import React from "react";
-import { resumeData } from "@/data/resume-data";
-import { Printer, MapPin, Mail, Phone, Github, Globe, Linkedin } from "lucide-react";
+'use client';
+
+import React, { useState } from 'react';
+import { Mail, Github, MapPin, Globe, Phone, Printer, Languages } from 'lucide-react';
+import Link from 'next/link';
+
+// --- Configuration / Data (Multi-language) ---
+const RESUME_DATA = {
+  en: {
+    name: "PARINYA MACHAOPA",
+    title: "AI Engineer & Full Stack Developer",
+    summary: "Full-Stack AI Engineer with expertise in AI Solutions (Computer Vision & LLMs) and Infrastructure. Experienced in designing complex database schemas for enterprise HR systems and deploying secure, high-performance web applications using Next.js and Docker. Proven ability to digitize manual workflows and solve data scarcity problems via synthetic data generation.",
+    experienceTitle: "Work Experience",
+    projectTitle: "Key Projects",
+    educationTitle: "Education",
+    skillsTitle: "Technical Skills",
+    experience: [
+      {
+        role: "Software Developer Intern", 
+        company: "Eternelle Co., Ltd.",
+        period: "Apr 2025 – May 2025",
+        points: [
+          "**Proficient in Full-stack development** by building an HRIS with **Next.js** and **MSSQL**, learning to transform complex physical workflows into efficient digital systems.",
+          "Deepened understanding of **Relational Database Design** through architecting schemas for payroll and career history logic.",
+          "Gained practical experience in **Enterprise Security** by implementing **RBAC** to protect sensitive employee data."
+        ]
+      },
+      {
+        role: "Full Stack Developer Intern",
+        company: "Faculty of Medical Science, Naresuan University",
+        period: "Nov 2023 - Nov 2024 (Project Delivery)", 
+        points: [
+          "Learned to bridge user requirements with technical solutions by digitizing manual tracking via **PHP** and **MySQL**.",
+          "Explored **Geospatial Data Visualization** using **Leaflet.js**, improving strategic planning through interactive mapping.",
+          "Mastered **Query Optimization**, learning how database performance directly impacts administrative efficiency."
+        ]
+      }
+    ],
+    projects: [
+      {
+        title: "Enterprise-Grade Home Lab Infrastructure",
+        tech: "Docker, Linux, Cloudflare, Tailscale",
+        points: [
+          "Navigated complex **Network Security** challenges by self-hosting microservices via **VPN Mesh**, avoiding public exposure.",
+          "Gained hands-on experience in **Systems Administration** and DNS management for robust remote access."
+        ]
+      },
+      {
+        title: "AI Clothes Detection for Suspect Identification",
+        tech: "Python, PyTorch, YOLO, OpenCV",
+        points: [
+          "Developed an AI system to identify individuals from CCTV feeds based on physical descriptions of clothing to assist in suspect tracking.",
+          "Solved **Data Scarcity** by engineering a Synthetic Data Pipeline to generate 10,000+ labeled clothing images, learning how to bridge the gap between virtual and real-world data.",
+          "Explored **Real-time Inference** on video streams, focusing on the accuracy of detection in low-quality surveillance environments."
+        ]
+      },
+      {
+        title: "Epic Card Battle RPG",
+        tech: "Next.js 14, TypeScript, Tailwind CSS",
+        points: [
+          "Mastered **Advanced State Management** and decoupled architecture, learning to manage complex game logic without external engines.",
+          "Deepened **Type Safety** knowledge through strict TypeScript patterns to ensure code maintainability."
+        ]
+      },
+      {
+        title: "AI-Powered Stock Sentiment Bot",
+        tech: "Python, LLMs (Gemini/GPT-4), Supabase",
+        points: [
+          "Explored **Prompt Engineering** and **LLM Orchestration**, learning to optimize token costs while maintaining analysis quality.",
+          "Learned to automate lifecycle tasks (CI/CD) using **GitHub Actions** for real-time market data."
+        ]
+      }
+    ],
+    education: {
+      degree: "Bachelor of Engineering in Computer Engineering",
+      university: "Naresuan University",
+      year: "Graduating 2026"
+    }
+  },
+  th: {
+    name: "ปริญญา มาชาวป่า",
+    title: "วิศวกรเอไอ และนักพัฒนาเว็บแบบฟูลสแต็ก",
+    summary: "วิศวกร AI แบบ Full-Stack ที่มีความเชี่ยวชาญด้านโซลูชัน AI (Computer Vision & LLMs) และโครงสร้างพื้นฐาน มีประสบการณ์ในการออกแบบฐานข้อมูลที่ซับซ้อนสำหรับระบบ HR ระดับองค์กร และการปรับใช้เว็บแอปพลิเคชันประสิทธิภาพสูงที่มีความปลอดภัยสูงด้วย Next.js และ Docker มีความสามารถในการเปลี่ยนขั้นตอนการทำงานแบบดั้งเดิมให้เป็นระบบดิจิทัล และแก้ปัญหาการขาดแคลนข้อมูลด้วยการสร้างข้อมูลสังเคราะห์ (Synthetic Data)",
+    experienceTitle: "ประสบการณ์การทำงาน",
+    projectTitle: "โปรเจกต์ที่สำคัญ",
+    educationTitle: "การศึกษา",
+    skillsTitle: "ทักษะทางเทคนิค",
+    experience: [
+      {
+        role: "นักศึกษาฝึกงานซอฟต์แวร์", 
+        company: "บริษัท อีเทอเนลเล่ จำกัด",
+        period: "เม.ย. 2568 – พ.ค. 2568",
+        points: [
+          "**สามารถพัฒนาแบบ Full-stack ได้เป็นอย่างดี** ผ่านการสร้างระบบ HRIS ด้วย **Next.js** และ **MSSQL** เรียนรู้การเปลี่ยนกระบวนการทำงานในกระดาษให้เป็นระบบดิจิทัลที่มีประสิทธิภาพ",
+          "เข้าใจการออกแบบ **Relational Database** ในเชิงลึกผ่านการออกแบบ Schema สำหรับระบบคำนวณเงินเดือนและการจัดการประวัติพนักงาน",
+          "ได้รับประสบการณ์จริงด้าน **Enterprise Security** โดยการนำระบบ **RBAC** มาใช้เพื่อปกป้องข้อมูลเงินเดือนและข้อมูลพนักงานที่ละเอียดอ่อน"
+        ]
+      },
+      {
+        role: "นักศึกษาฝึกงานฟูลสแต็ก",
+        company: "คณะวิทยาศาสตร์การแพทย์ มหาวิทยาลัยนเรศวร",
+        period: "พ.ย. 2566 - พ.ย. 2567 (ส่งมอบโปรเจกต์)", 
+        points: [
+          "เรียนรู้การแปลงความต้องการของผู้ใช้ให้เป็นโซลูชันทางเทคนิค โดยการเปลี่ยนระบบติดตามการฝึกงานแบบเดิมให้เป็นดิจิทัลด้วย **PHP** และ **MySQL**",
+          "ศึกษาการจัดการข้อมูล **Geospatial** ด้วย **Leaflet.js** เพื่อช่วยในการวางแผนกลยุทธ์ผ่านแผนที่แบบโต้ตอบ",
+          "ฝึกฝนทักษะ **Query Optimization** เรียนรู้ว่าประสิทธิภาพของฐานข้อมูลส่งผลโดยตรงต่อความรวดเร็วในการทำงานของเจ้าหน้าที่"
+        ]
+      }
+    ],
+    projects: [
+      {
+        title: "โครงสร้างพื้นฐาน Home Lab ระดับองค์กร",
+        tech: "Docker, Linux, Cloudflare, Tailscale",
+        points: [
+          "จัดการความท้าทายด้าน **Network Security** โดยการโฮสต์ Microservices ผ่าน **VPN Mesh** เพื่อหลีกเลี่ยงการเปิดช่องโหว่สู่สาธารณะ",
+          "ได้รับประสบการณ์ตรงด้าน **Systems Administration** และการจัดการ DNS สำหรับการเข้าถึงจากระยะไกลที่มีความเสถียร"
+        ]
+      },
+      {
+        title: "ระบบ AI ตรวจจับเสื้อผ้าเพื่อระบุตัวตนบุคคล",
+        tech: "Python, PyTorch, YOLO, OpenCV",
+        points: [
+          "พัฒนา AI สำหรับตรวจจับและค้นหาบุคคลจากกล้องวงจรปิดโดยวิเคราะห์จากลักษณะเสื้อผ้า เพื่อช่วยในการระบุตัวตนผู้ต้องสงสัยตามรูปพรรณสัณฐาน",
+          "แก้ปัญหา **การขาดแคลนข้อมูล** โดยสร้าง Pipeline ข้อมูลสังเคราะห์กว่า 10,000 ภาพ เรียนรู้การปรับจูนโมเดลให้ใช้งานได้จริงกับภาพจากกล้องวงจรปิดที่มีความละเอียดต่ำ",
+          "ศึกษาการทำ **Real-time Inference** กับไฟล์วิดีโอ เพื่อเพิ่มประสิทธิภาพในการค้นหาบุคคลในสถานการณ์จริง"
+        ]
+      },
+      {
+        title: "Epic Card Battle RPG",
+        tech: "Next.js 14, TypeScript, Tailwind CSS",
+        points: [
+          "เชี่ยวชาญการจัดการ **State ระดับสูง** และสถาปัตยกรรมแบบ Decoupled เรียนรู้การจัดการ Logic ของเกมที่ซับซ้อนโดยไม่ใช้ Game Engine",
+          "เพิ่มพูนความรู้ด้าน **Type Safety** ผ่านรูปแบบ TypeScript ขั้นสูงเพื่อให้โค้ดดูแลรักษาง่ายในระยะยาว"
+        ]
+      },
+      {
+        title: "บอทวิเคราะห์หุ้นด้วย AI",
+        tech: "Python, LLMs (Gemini/GPT-4), Supabase",
+        points: [
+          "ศึกษาด้าน **Prompt Engineering** และการจัดการ **LLM Orchestration** เรียนรู้วิธีลดต้นทุน API ในขณะที่ยังรักษาคุณภาพการวิเคราะห์ไว้ได้",
+          "เรียนรู้การทำงานแบบอัตโนมัติ (CI/CD) ด้วย **GitHub Actions** สำหรับการดึงข้อมูลตลาดแบบ Real-time"
+        ]
+      }
+    ],
+    education: {
+      degree: "วิศวกรรมศาสตรบัณฑิต สาขาวิชาวิศวกรรมคอมพิวเตอร์",
+      university: "มหาวิทยาลัยนเรศวร",
+      year: "จบการศึกษาปี 2569"
+    }
+  }
+};
+
+const COMMON_CONTACT = {
+  email: "pmachaopa1@gmail.com",
+  tel: "(+66) 65-815-1150", 
+  location: "Phitsanulok, Thailand",
+  github: "water50m",
+  githubUrl: "https://github.com/water50m",
+  portfolio: "portfome-olive.vercel.app",
+  portfolioUrl: "https://portfome-olive.vercel.app/",
+};
+
+const SKILLS = {
+  languages: ["Python", "TypeScript", "SQL (MSSQL/MySQL)", "PHP", "C++"],
+  frameworks: ["Next.js", "React", "Tailwind CSS", "PyTorch", "OpenCV", "YOLOv8"],
+  infrastructure: ["Docker", "Linux (Debian)", "Cloudflare", "Tailscale", "Git/GitHub Actions"],
+  tools: ["Microsoft SQL Server", "Supabase", "PostgreSQL", "Figma"]
+};
 
 export default function ResumePage() {
-  const handlePrint = () => {
-    window.print();
-  };
+  const [lang, setLang] = useState<'en' | 'th'>('en');
+  const d = RESUME_DATA[lang];
 
   return (
-    <div className="min-h-screen bg-gray-50 py-8 print:bg-white print:p-0">
-      
-      {/* --- ปุ่ม Download PDF (ซ่อนเวลา Print) --- */}
-      <div className="fixed bottom-8 right-8 print:hidden z-50">
-        <button
-          onClick={handlePrint}
-          className="flex items-center gap-2 bg-slate-900 hover:bg-slate-800 text-white font-medium py-3 px-6 rounded-full shadow-xl transition-all border border-slate-700"
+    <main className="min-h-screen bg-gray-100 py-5 print:bg-white print:p-0">
+      {/* Floating Buttons */}
+      <div className="fixed bottom-5 right-5 flex flex-col gap-3 print:hidden z-50">
+        <button 
+          onClick={() => setLang(lang === 'en' ? 'th' : 'en')}
+          className="bg-blue-600 text-white px-4 py-2 rounded-full shadow-lg hover:bg-blue-700 transition flex items-center gap-2 text-sm"
         >
-          <Printer size={18} /> Save as PDF
+          <Languages size={16} /> {lang === 'en' ? 'ภาษาไทย' : 'English'}
+        </button>
+        <button 
+          onClick={() => window.print()}
+          className="bg-black text-white px-4 py-2 rounded-full shadow-lg hover:bg-gray-800 transition flex items-center gap-2 text-sm"
+        >
+          <Printer size={16} /> Save PDF
         </button>
       </div>
 
-      {/* --- A4 Container --- */}
-      <div className="max-w-[210mm] mx-auto bg-white shadow-xl print:shadow-none print:max-w-none min-h-[297mm] p-8 md:p-4 text-slate-800">
+      {/* A4 Page Container */}
+      <div className="w-[210mm] mx-auto bg-white shadow-xl p-8 min-h-[297mm] print:shadow-none print:w-full print:h-full print:p-6 text-gray-800">
         
-        {/* --- 1. HEADER (ปรับใหม่ให้คลีน) --- */}
-        <header className="flex flex-col md:flex-row gap-6 items-start border-b-2 border-slate-100  mb-8">
+        {/* --- Header --- */}
+        <header className="border-b-2 border-gray-900 pb-2 mb-2">
+          <div className="flex justify-between items-end">
+            <div>
+              <h1 className="text-3xl font-bold uppercase tracking-tight leading-none">{d.name}</h1>
+              <p className="text-lg font-medium text-gray-600 mt-1">{d.title}</p>
+            </div>
+          </div>
           
-          {/* ส่วนรูปภาพ (ถ้าไม่ใส่รูป ให้ลบ div นี้ออกได้เลย) */}
-          {/* <div className="w-24 h-24 md:w-32 md:h-32 bg-slate-200 rounded-full flex-shrink-0 overflow-hidden border-4 border-white shadow-sm"> */}
-            {/* ใส่รูปจริงตรงนี้: <img src="/profile.jpg" alt="Profile" className="w-full h-full object-cover" /> */}
-            {/* <div className="w-full h-full flex items-center justify-center text-slate-400 text-xs">NO PHOTO</div> */}
-          {/* </div> */}
-
-          {/* ส่วนข้อมูลส่วนตัว */}
-          <div className="flex-1 space-y-2">
-            <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 uppercase">
-              {resumeData.personalInfo.name}
-            </h1>
-            <p className="text-xl text-blue-600 font-medium">
-              {resumeData.personalInfo.title}
-            </p>
-            
-            {/* Contact Grid */}
-            <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-slate-600 mt-3">
-              {resumeData.personalInfo.email && (
-                  <div className="flex items-center gap-1.5">
-                      <Mail size={14} className="text-slate-400" /> 
-                      <a href={`mailto:${resumeData.personalInfo.email}`} className="hover:text-blue-600 transition-colors">
-                        {resumeData.personalInfo.email}
-                      </a>
-                  </div>
-              )}
-              {resumeData.personalInfo.phone && (
-                  <div className="flex items-center gap-1.5">
-                      <Phone size={14} className="text-slate-400" /> {resumeData.personalInfo.phone}
-                  </div>
-              )}
-              <div className="flex items-center gap-1.5">
-                <MapPin size={14} className="text-slate-400" /> {resumeData.personalInfo.location}
-              </div>
-            </div>
-
-            {/* Social Links */}
-            <div className="flex flex-wrap gap-4 text-sm mt-2">
-                {resumeData.personalInfo.github && (
-                   <a href={`https://${resumeData.personalInfo.github}`} target="_blank" className="flex items-center gap-1.5 text-slate-500 hover:text-black transition-colors">
-                      <Github size={14} /> 
-                      <span>{resumeData.personalInfo.github.split('/').pop()}</span>
-                   </a>
-                )}
-                {resumeData.personalInfo.linkedin && (
-                   <a href={`https://${resumeData.personalInfo.linkedin}`} target="_blank" className="flex items-center gap-1.5 text-slate-500 hover:text-blue-700 transition-colors">
-                      <Linkedin size={14} /> 
-                      <span>LinkedIn</span>
-                   </a>
-                )}
-                 {resumeData.personalInfo.portfolio && (
-                   <a href={`https://${resumeData.personalInfo.portfolio}`} target="_blank" className="flex items-center gap-1.5 text-slate-500 hover:text-blue-600 transition-colors">
-                      <Globe size={14} /> 
-                      <span>Portfolio</span>
-                   </a>
-                )}
-            </div>
+          <div className="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-xs text-gray-600 font-medium">
+            <a href={`mailto:${COMMON_CONTACT.email}`} className="flex items-center gap-1 hover:text-black">
+              <Mail size={12} /> {COMMON_CONTACT.email}
+            </a>
+            <span className="flex items-center gap-1">
+              <Phone size={12} /> {COMMON_CONTACT.tel}
+            </span>
+            <span className="flex items-center gap-1">
+              <MapPin size={12} /> {COMMON_CONTACT.location}
+            </span>
+            <Link href={COMMON_CONTACT.githubUrl} className="flex items-center gap-1 hover:text-black">
+              <Github size={12} /> github.com/{COMMON_CONTACT.github}
+            </Link>
+            <Link href={COMMON_CONTACT.portfolioUrl} className="flex items-center gap-1 hover:text-black">
+              <Globe size={12} /> {COMMON_CONTACT.portfolio}
+            </Link>
           </div>
         </header>
 
-        {/* --- 2. SUMMARY (เอาสีพื้นหลังออกแล้ว) --- */}
-        <section className="mb-4">
-          <h2 className="text-sm font-bold uppercase tracking-wider text-slate-400 mb-3 border-b border-slate-100 pb-1">
-            Professional Summary
-          </h2>
-            <p className="text-slate-700 leading-relaxed text-sm md:text-base text-left" 
-                dangerouslySetInnerHTML={{ __html: resumeData.summary.replace(/\*\*(.*?)\*\*/g, '<span class="font-semibold text-slate-900">$1</span>') }} 
-            />        
+        {/* --- Summary --- */}
+        <section className="mb-3">
+          <h2 className="text-xs font-bold uppercase border-b border-gray-300 mb-1 text-gray-900 tracking-wider font-sans">{d.experienceTitle === "Work Experience" ? "Professional Summary" : "สรุปทักษะและความเชี่ยวชาญ"}</h2>
+          <p className="text-xs leading-snug text-gray-700 text-justify">
+            {d.summary}
+          </p>
         </section>
 
-        {/* --- 3. SKILLS (ปรับระยะห่างนิดหน่อย) --- */}
-        <section className="mb-8">
-          <h2 className="text-sm font-bold uppercase tracking-wider text-slate-400 mb-4 border-b border-slate-100 pb-1">
-            Technical Skills
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-y-6 gap-x-12">
-            {resumeData.skills.map((skillGroup, index) => (
-              <div key={index}>
-                <h3 className="font-semibold text-slate-900 text-sm mb-2">{skillGroup.category}</h3>
-                <div className="flex flex-wrap gap-2">
-                  {skillGroup.items.map((item, idx) => (
-                    <span key={idx} className="bg-slate-100 hover:bg-slate-200 transition-colors text-slate-700 px-2.5 py-1 rounded-md text-xs font-medium print:border print:border-gray-200 print:bg-white">
-                      {item}
-                    </span>
-                  ))}
-                </div>
+        {/* --- Technical Skills --- */}
+        <section className="mb-3">
+          <h2 className="text-xs font-bold uppercase border-b border-gray-300 mb-1 text-gray-900 tracking-wider font-sans">{d.skillsTitle}</h2>
+          <div className="grid grid-cols-[100px_1fr] gap-y-0.5 text-xs leading-tight">
+            <span className="font-bold text-gray-800">{lang === 'en' ? 'Languages:' : 'ภาษาโปรแกรม:'}</span>
+            <span className="text-gray-700">{SKILLS.languages.join(", ")}</span>
+            <span className="font-bold text-gray-800">{lang === 'en' ? 'Frameworks:' : 'เฟรมเวิร์ก:'}</span>
+            <span className="text-gray-700">{SKILLS.frameworks.join(", ")}</span>
+            <span className="font-bold text-gray-800">{lang === 'en' ? 'Infrastructure:' : 'โครงสร้างพื้นฐาน:'}</span>
+            <span className="text-gray-700">{SKILLS.infrastructure.join(", ")}</span>
+            <span className="font-bold text-gray-800">{lang === 'en' ? 'Tools:' : 'เครื่องมืออื่นๆ:'}</span>
+            <span className="text-gray-700">{SKILLS.tools.join(", ")}</span>
+          </div>
+        </section>
+
+        {/* --- Experience --- */}
+        <section className="mb-3">
+          <h2 className="text-xs font-bold uppercase border-b border-gray-300 mb-2 text-gray-900 tracking-wider font-sans">{d.experienceTitle}</h2>
+          {d.experience.map((exp, index) => (
+            <div key={index} className="mb-2">
+              <div className="flex justify-between items-baseline mb-0.5">
+                <h3 className="text-sm font-bold text-gray-900 leading-none">{exp.role}</h3>
+                <span className="text-xs font-medium text-gray-500 whitespace-nowrap ml-2">{exp.period}</span>
               </div>
-            ))}
-          </div>
+              <p className="text-xs font-semibold text-gray-700 italic mb-0.5">{exp.company}</p>
+              <ul className="list-disc list-outside ml-3 text-xs text-gray-700 space-y-0.5 leading-snug text-justify">
+                {exp.points.map((point, i) => (
+                  <li key={i} className="pl-1" dangerouslySetInnerHTML={{ __html: point.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') }} />
+                ))}
+              </ul>
+            </div>
+          ))}
         </section>
 
-        {/* --- 4. PROJECTS (ส่วนสำคัญของคุณ) --- */}
-        <section className="mb-10">
-          <div className="flex justify-between items-end border-b border-slate-100 pb-1 mb-4">
-            <h2 className="text-sm font-bold uppercase tracking-wider text-slate-400">
-              Key Projects
-            </h2>
-            <span className="text-[10px] text-slate-400 uppercase tracking-widest print:hidden">Selected Works</span>
-          </div>
-          
-          <div className="space-y-8">
-            {resumeData.projects.map((project, index) => (
-              <div key={index} className="group">
-                <div className="flex flex-col md:flex-row md:justify-between md:items-baseline mb-2">
-                    <h3 className="font-bold text-slate-900 text-base group-hover:text-blue-600 transition-colors">
-                      {project.title}
-                    </h3>
-                    <div className="flex gap-2 text-xs font-medium text-slate-500 mt-1 md:mt-0">
-                        {project.tech.map((t,i) => (
-                          <span key={i} className="bg-blue-50 text-blue-700 px-1.5 py-0.5 rounded print:bg-transparent print:text-slate-500 print:border print:border-slate-200">
-                            {t}
-                          </span>
-                        ))}
-                    </div>
+        {/* --- Projects --- */}
+        <section className="mb-3">
+          <h2 className="text-xs font-bold uppercase border-b border-gray-300 mb-2 text-gray-900 tracking-wider font-sans">{d.projectTitle}</h2>
+          <div className="space-y-2">
+            {d.projects.map((project, index) => (
+              <div key={index}>
+                <div className="flex justify-between items-baseline mb-0.5">
+                  <h3 className="text-sm font-bold text-gray-900 leading-none">{project.title}</h3>
+                  <span className="text-[10px] font-mono text-gray-500 bg-gray-50 px-1 rounded border border-gray-100 print:border-none print:p-0">
+                    {project.tech}
+                  </span>
                 </div>
-                <ul className="list-disc list-outside ml-4 space-y-1.5 marker:text-slate-300">
-                  {project.description.map((desc, i) => (
-                    <li key={i} className="text-sm text-slate-600 leading-relaxed" dangerouslySetInnerHTML={{ __html: desc.replace(/\*\*(.*?)\*\*/g, '<strong class="text-slate-800 font-semibold">$1</strong>') }} />
+                <ul className="list-disc list-outside ml-3 text-xs text-gray-700 space-y-0.5 leading-snug text-justify">
+                  {project.points.map((point, i) => (
+                    <li key={i} className="pl-1" dangerouslySetInnerHTML={{ __html: point.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') }} />
                   ))}
                 </ul>
               </div>
@@ -151,28 +284,19 @@ export default function ResumePage() {
           </div>
         </section>
 
-
-
-        {/* --- 6. EDUCATION --- */}
+        {/* --- Education --- */}
         <section>
-          <h2 className="text-sm font-bold uppercase tracking-wider text-slate-400 mb-4 border-b border-slate-100 pb-1">
-            Education
-          </h2>
-          <div>
-            <h3 className="font-bold text-slate-900">{resumeData.education.degree}</h3>
-            <div className="flex justify-between text-sm text-slate-600 mt-1">
-                <span>{resumeData.education.university}</span>
-                {/* <span>{resumeData.education.year}</span> */}
+          <h2 className="text-xs font-bold uppercase border-b border-gray-300 mb-1 text-gray-900 tracking-wider font-sans">{d.educationTitle}</h2>
+          <div className="flex justify-between items-baseline text-xs">
+            <div>
+              <span className="font-bold text-gray-900 block leading-tight">{d.education.degree}</span>
+              <span className="text-gray-700">{d.education.university}</span>
             </div>
+            <span className="text-gray-500 font-medium whitespace-nowrap ml-2">{d.education.year}</span>
           </div>
         </section>
 
       </div>
-      
-      {/* Footer (Screen only) */}
-      <div className="text-center text-gray-400 text-xs mt-8 pb-4 print:hidden opacity-50">
-        Preview Mode • Use Chrome for best printing results
-      </div>
-    </div>
+    </main>
   );
 }
