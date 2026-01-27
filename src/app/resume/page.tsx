@@ -215,12 +215,18 @@ export default function ResumePage() {
             <Link href={COMMON_CONTACT.githubUrl} className="flex items-center gap-1 hover:text-black">
               <Github size={12} /> github.com/{COMMON_CONTACT.github}
             </Link>
-            <Link href={COMMON_CONTACT.portfolioUrl} className="flex items-center gap-1 hover:text-black">
-              <Globe size={12} /> portfolio: {COMMON_CONTACT.portfolio}
-            </Link>
-            <Link href={COMMON_CONTACT.portfolioUrl} className="flex items-center gap-1 hover:text-black">
-              <Globe size={12} /> resume: {COMMON_CONTACT.resumeUrl}
-            </Link>
+            <div className="flex items-center gap-1 hover:text-black">
+              <Link href={COMMON_CONTACT.portfolioUrl} className="flex items-center gap-1 hover:text-black">
+                <Globe size={12} /> 
+              </Link>
+              portfolio: {COMMON_CONTACT.portfolio}
+            </div>
+            <div className="flex items-center gap-1 hover:text-black">
+              <Link href={COMMON_CONTACT.portfolioUrl} >
+                <Globe size={12} /> 
+              </Link>
+              resume: {COMMON_CONTACT.resumeUrl}
+            </div>
           </div>
         </header>
 
