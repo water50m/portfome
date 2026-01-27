@@ -158,6 +158,7 @@ const COMMON_CONTACT = {
   githubUrl: "https://github.com/water50m",
   portfolio: "portfome-olive.vercel.app",
   portfolioUrl: "https://portfome-olive.vercel.app/",
+  resumeUrl: "https://portfome-olive.vercel.app/resume"
 };
 
 const SKILLS = {
@@ -215,7 +216,10 @@ export default function ResumePage() {
               <Github size={12} /> github.com/{COMMON_CONTACT.github}
             </Link>
             <Link href={COMMON_CONTACT.portfolioUrl} className="flex items-center gap-1 hover:text-black">
-              <Globe size={12} /> {COMMON_CONTACT.portfolio}
+              <Globe size={12} /> portfolio: {COMMON_CONTACT.portfolio}
+            </Link>
+            <Link href={COMMON_CONTACT.portfolioUrl} className="flex items-center gap-1 hover:text-black">
+              <Globe size={12} /> resume: {COMMON_CONTACT.resumeUrl}
             </Link>
           </div>
         </header>
