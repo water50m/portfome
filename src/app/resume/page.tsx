@@ -212,11 +212,11 @@ export default function ResumePage() {
             <span className="flex items-center gap-1">
               <MapPin size={12} /> {COMMON_CONTACT.location}
             </span>
-            <Link href={COMMON_CONTACT.githubUrl} className="flex items-center gap-1 hover:text-black">
+            <Link href={COMMON_CONTACT.githubUrl} className="flex items-center gap-1 hover:text-black" target="_blank">
               <Github size={12} /> github.com/{COMMON_CONTACT.github}
             </Link>
             <div className="flex items-center gap-1 hover:text-black">
-              <Link href={COMMON_CONTACT.portfolioUrl} className="flex items-center gap-1 hover:text-black">
+              <Link href={COMMON_CONTACT.portfolioUrl} className="flex items-center gap-1 hover:text-black" target="_blank">
                 <Globe size={12} /> 
               </Link>
               portfolio: {COMMON_CONTACT.portfolio}
