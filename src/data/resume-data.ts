@@ -11,8 +11,7 @@ export const resumeData = {
     github: "github.com/water50m",
     portfolio: "🔴 [your-portfolio-url.com]",
   },
-  summary:
-    "Full-Stack AI Engineer & Infrastructure Specialist Innovative Developer with expertise in AI Solutions (Computer Vision & LLMs) and Real-time Data Visualization. Experienced in engineering high-performance web systems, from rendering complex LiDAR/AMR dashboards to orchestrating automated trading workflows using Multi-Provider LLMs. Deeply skilled in deploying secure, enterprise-grade infrastructure on Linux environments, optimizing server performance, and solving complex network challenges.",
+  summary:"Results-driven Full-Stack Developer experienced in designing and engineering high-performance web systems, from UI implementation to complex database architecture. Skilled in modern web technologies and secure infrastructure deployment. Brings an innovative edge with practical knowledge in AI integration, particularly in Computer Vision and LLMs, to enhance application capabilities and automate workflows.",
   
   skills: [
     
@@ -25,13 +24,17 @@ export const resumeData = {
       items: ["Next.js", "React", "TypeScript", "Node.js", "Tailwind CSS"],
     },
     {
+      category: "Database",
+      items: ["PostgreSQL", "MySQL", "SQL Server", "Supabase"],
+    },
+    {
       category: "Networking & Security",
       items: ["Cloudflare DNS", "Tailscale (VPN)", "UFW Firewall", "SSH"],
     },
-    {
-      category: "AI & Computer Vision",
-      items: ["Python", "OpenCV", "YOLO", "Image Processing"],
-    },
+    // {
+    //   category: "AI & Computer Vision",
+    //   items: ["Python", "OpenCV", "YOLO", "Image Processing"],
+    // },
   ],
 
   experience: [
@@ -49,6 +52,33 @@ export const resumeData = {
   ],
 
   projects: [
+    {
+        title: "Medical Science Internship Mapping System",
+        link:"",
+        github:"",
+        tech: ["PHP", "MySQL", "JavaScript", "Leaflet.js", "HTML5/CSS3", "Apache Web Server"],
+        highlight: false,
+        description: [
+            "Developed a full-stack CRUD application using **PHP** and **MySQL** to manage internship records.",
+            "Integrated **Leaflet.js** to visualize internship locations on an interactive map for strategic planning.",
+            "Implemented search and filtering tools to query data by location, major, and academic year.",
+        ],
+        img: "images/medsciWeb.png"
+    },
+    {
+      title: "Faculty Personnel & Budget Management System (FPA)",
+      link: "",
+      github: "",
+      tech: ["PHP", "MySQL", "LDAP", "UI/UX Design"],
+      highlight: true, 
+      description: [
+        "Architected and developed a comprehensive Budget Management and Personnel Information System from scratch for the university faculty.",
+        "Designed the full relational database schema using **MySQL** and implemented the core business logic and backend with **PHP**.",
+        "Integrated secure university-level authentication by implementing **LDAP login flows** for faculty staff members.",
+        "Designed the user interface and user experience, including the implementation of **PDPA-compliant UI modals** to ensure data privacy."
+      ],
+      img: "images/FPAsys_img.jpg"
+    },
     {
       title: "Enterprise-Grade Home Lab Infrastructure",
       link:"/project/home-cloud-server",
@@ -76,19 +106,7 @@ export const resumeData = {
         ],
         img: "images/thunder_project.png"
     },
-    {
-        title: "Medical Science Internship Mapping System",
-        link:"",
-        github:"https://github.com/water50m/database_mesci",
-        tech: ["PHP", "MySQL", "JavaScript", "Leaflet.js", "HTML5/CSS3", "Apache Web Server"],
-        highlight: false,
-        description: [
-            "Developed a full-stack CRUD application using **PHP** and **MySQL** to manage internship records.",
-            "Integrated **Leaflet.js** to visualize internship locations on an interactive map for strategic planning.",
-            "Implemented search and filtering tools to query data by location, major, and academic year.",
-        ],
-        img: "images/medsciWeb.png"
-    },
+    
     {
       title: "AI-Powered Stock Sentiment & Prediction Bot",
       link: "/project/Analysis-news", 

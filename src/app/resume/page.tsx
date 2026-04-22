@@ -46,14 +46,22 @@ const RESUME_DATA = {
         ]
       },
       {
-        title: "AI Clothes Detection for Suspect Identification",
-        tech: "Python, PyTorch, YOLO, OpenCV",
+        title: "Faculty Personnel & Budget Management System (FPA)",
+        tech: "PHP, MySQL, LDAP, UI/UX Design",
         points: [
-          "Developed an AI system to identify individuals from CCTV feeds based on physical descriptions of clothing to assist in suspect tracking.",
-          "Solved **Data Scarcity** by engineering a Synthetic Data Pipeline to generate 10,000+ labeled clothing images, learning how to bridge the gap between virtual and real-world data.",
-          "Explored **Real-time Inference** on video streams, focusing on the accuracy of detection in low-quality surveillance environments."
+          "Engineered a full-cycle web application from scratch, designing a robust **Relational Database** to streamline complex faculty budget and personnel data.",
+          "Integrated enterprise-level **LDAP Authentication** and implemented **PDPA-compliant** UI flows to ensure strict organizational data privacy."
         ]
       },
+      // {
+      //   title: "AI Clothes Detection for Suspect Identification",
+      //   tech: "Python, PyTorch, YOLO, OpenCV",
+      //   points: [
+      //     "Developed an AI system to identify individuals from CCTV feeds based on physical descriptions of clothing to assist in suspect tracking.",
+      //     "Solved **Data Scarcity** by engineering a Synthetic Data Pipeline to generate 10,000+ labeled clothing images, learning how to bridge the gap between virtual and real-world data.",
+      //     "Explored **Real-time Inference** on video streams, focusing on the accuracy of detection in low-quality surveillance environments."
+      //   ]
+      // },
       {
         title: "Epic Card Battle RPG",
         tech: "Next.js 14, TypeScript, Tailwind CSS",
@@ -116,13 +124,21 @@ const RESUME_DATA = {
           "ได้รับประสบการณ์ตรงด้าน **Systems Administration** และการจัดการ DNS สำหรับการเข้าถึงจากระยะไกลที่มีความเสถียร"
         ]
       },
+      // {
+      //   title: "ระบบ AI ตรวจจับเสื้อผ้าเพื่อระบุตัวตนบุคคล",
+      //   tech: "Python, PyTorch, YOLO, OpenCV",
+      //   points: [
+      //     "พัฒนา AI สำหรับตรวจจับและค้นหาบุคคลจากกล้องวงจรปิดโดยวิเคราะห์จากลักษณะเสื้อผ้า เพื่อช่วยในการระบุตัวตนผู้ต้องสงสัยตามรูปพรรณสัณฐาน",
+      //     "แก้ปัญหา **การขาดแคลนข้อมูล** โดยสร้าง Pipeline ข้อมูลสังเคราะห์กว่า 10,000 ภาพ เรียนรู้การปรับจูนโมเดลให้ใช้งานได้จริงกับภาพจากกล้องวงจรปิดที่มีความละเอียดต่ำ",
+      //     "ศึกษาการทำ **Real-time Inference** กับไฟล์วิดีโอ เพื่อเพิ่มประสิทธิภาพในการค้นหาบุคคลในสถานการณ์จริง"
+      //   ]
+      // },
       {
-        title: "ระบบ AI ตรวจจับเสื้อผ้าเพื่อระบุตัวตนบุคคล",
-        tech: "Python, PyTorch, YOLO, OpenCV",
+        title: "ระบบจัดการข้อมูลบุคลากรและงบประมาณคณะ (FPA System)",
+        tech: "PHP, MySQL, LDAP, UI/UX Design",
         points: [
-          "พัฒนา AI สำหรับตรวจจับและค้นหาบุคคลจากกล้องวงจรปิดโดยวิเคราะห์จากลักษณะเสื้อผ้า เพื่อช่วยในการระบุตัวตนผู้ต้องสงสัยตามรูปพรรณสัณฐาน",
-          "แก้ปัญหา **การขาดแคลนข้อมูล** โดยสร้าง Pipeline ข้อมูลสังเคราะห์กว่า 10,000 ภาพ เรียนรู้การปรับจูนโมเดลให้ใช้งานได้จริงกับภาพจากกล้องวงจรปิดที่มีความละเอียดต่ำ",
-          "ศึกษาการทำ **Real-time Inference** กับไฟล์วิดีโอ เพื่อเพิ่มประสิทธิภาพในการค้นหาบุคคลในสถานการณ์จริง"
+          "พัฒนาระบบเว็บแอปพลิเคชันแบบ Full-cycle ตั้งแต่เริ่มต้น โดยออกแบบโครงสร้าง **Relational Database** เพื่อจัดการข้อมูลบุคลากรและงบประมาณของคณะที่มีความซับซ้อน",
+          "เชื่อมต่อระบบยืนยันตัวตนระดับองค์กรด้วย **LDAP Authentication** และออกแบบหน้าต่าง UI ที่รองรับนโยบาย **PDPA** เพื่อรักษาความปลอดภัยและความเป็นส่วนตัวของข้อมูลผู้ใช้งาน"
         ]
       },
       {
