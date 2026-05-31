@@ -11,10 +11,10 @@ export const resumeData = {
     github: "github.com/water50m",
     portfolio: "🔴 [your-portfolio-url.com]",
   },
-  summary:"Results-driven Full-Stack Developer experienced in designing and engineering high-performance web systems, from UI implementation to complex database architecture. Skilled in modern web technologies and secure infrastructure deployment. Brings an innovative edge with practical knowledge in AI integration, particularly in Computer Vision and LLMs, to enhance application capabilities and automate workflows.",
-  
+  summary: "Results-driven Full-Stack Developer experienced in designing and engineering high-performance web systems, from UI implementation to complex database architecture. Skilled in modern web technologies and secure infrastructure deployment. Brings an innovative edge with practical knowledge in AI integration, particularly in Computer Vision and LLMs, to enhance application capabilities and automate workflows.",
+
   skills: [
-    
+
     {
       category: "Infrastructure & DevOps",
       items: ["Docker", "Docker Compose", "Linux (Debian)", "GitHub"],
@@ -53,24 +53,24 @@ export const resumeData = {
 
   projects: [
     {
-        title: "Medical Science Internship Mapping System",
-        link:"",
-        github:"",
-        tech: ["PHP", "MySQL", "JavaScript", "Leaflet.js", "HTML5/CSS3", "Apache Web Server"],
-        highlight: false,
-        description: [
-            "Developed a full-stack CRUD application using **PHP** and **MySQL** to manage internship records.",
-            "Integrated **Leaflet.js** to visualize internship locations on an interactive map for strategic planning.",
-            "Implemented search and filtering tools to query data by location, major, and academic year.",
-        ],
-        img: "images/medsciWeb.png"
+      title: "Medical Science Internship Mapping System",
+      link: "",
+      github: "",
+      tech: ["PHP", "MySQL", "JavaScript", "Leaflet.js", "HTML5/CSS3", "Apache Web Server"],
+      highlight: false,
+      description: [
+        "Developed a full-stack CRUD application using **PHP** and **MySQL** to manage internship records.",
+        "Integrated **Leaflet.js** to visualize internship locations on an interactive map for strategic planning.",
+        "Implemented search and filtering tools to query data by location, major, and academic year.",
+      ],
+      img: "images/medsciWeb.png"
     },
     {
       title: "Faculty Personnel & Budget Management System (FPA)",
       link: "",
       github: "",
       tech: ["PHP", "MySQL", "LDAP", "UI/UX Design"],
-      highlight: true, 
+      highlight: true,
       description: [
         "Architected and developed a comprehensive Budget Management and Personnel Information System from scratch for the university faculty.",
         "Designed the full relational database schema using **MySQL** and implemented the core business logic and backend with **PHP**.",
@@ -81,8 +81,8 @@ export const resumeData = {
     },
     {
       title: "Enterprise-Grade Home Lab Infrastructure",
-      link:"/project/home-cloud-server",
-      github:"",
+      link: "/project/home-cloud-server",
+      github: "",
       tech: ["Docker", "Tailscale", "Cloudflare", "Next.js", "Linux"],
       highlight: true, // ตัวนี้จะเด่นเป็นพิเศษ
       description: [
@@ -92,24 +92,53 @@ export const resumeData = {
         "Configured **UFW Firewall** and **Cloudflare** for robust security.",
       ],
     },
+
     {
-        title: "Epic Card Battle RPG",
-        link:"",
-        github:"https://github.com/water50m/Thunder-project",
-        tech: ["TNext.js 14 (App Router)", "TypeScript", "Tailwind CSS"],
-        highlight: false,
-        description: [
-            "Developed a scalable Turn-based Strategy game using **Next.js 14** and **TypeScript**, ensuring strict type safety and code maintainability.",
-            "Architected a modular codebase by decoupling complex game logic (Battle System, Enemy AI) from UI components using Custom React Hooks.",
-            "Designed a centralized static data layer (/data/db) for game balance management and utilized API Routes for data persistence.",
-            "Implemented complex state management for character customization, equipment loadouts, and card deck building without external game engines."
-        ],
-        img: "images/thunder_project.png"
+      title: "English Vocabulary Card Game Platform",
+      link: "",
+      github: "",
+      tech: ["Next.js 16", "React 19", "TypeScript", "PostgreSQL", "Tailwind CSS", "Framer Motion", "Chart.js", "JWT", "Docker"],
+      highlight: true,
+      description: [
+        "Developed a full-stack vocabulary learning platform using **Next.js App Router**, **TypeScript**, and **PostgreSQL**.",
+        "Implemented multiple quiz modes including multiple choice, typing, timed quiz, and think-and-reveal to support different learning styles.",
+        "Built a progress tracking system with XP, streaks, mastery status, dashboard statistics, and spaced repetition logic.",
+        "Created admin tools for managing vocabulary, users, story cards, and CSV-based word imports with real-time progress feedback.",
+        "Designed a responsive themed UI with **Tailwind CSS**, CSS variables, and **Framer Motion** animations."
+      ],
+      img: "images/ecg_total.jpg"
     },
-    
+    {
+      title: "Personal Task and Daily Checklist Management Platform",
+      link: "",
+      github: "",
+      tech: ["Next.js 16", "React 19", "TypeScript", "PostgreSQL", "Tailwind CSS 4", "Docker"],
+      highlight: false,
+      description: [
+        "Developed a full-stack productivity web app using **Next.js 16**, **TypeScript**, and **PostgreSQL** to manage tasks, daily checklists, appointments, and calendar events.",
+        "Implemented **PIN-based authentication**, recurring checklist rules, categories, tags, subtasks, appointment scheduling, and dashboard analytics.",
+        "Designed a responsive Thai-language interface with progress charts, filters, modals, calendar views, and Docker-ready production deployment.",
+      ],
+      img: "images/tdl_total.jpg"
+    },
+    {
+      title: "Epic Card Battle RPG",
+      link: "",
+      github: "https://github.com/water50m/Thunder-project",
+      tech: ["TNext.js 14 (App Router)", "TypeScript", "Tailwind CSS"],
+      highlight: false,
+      description: [
+        "Developed a scalable Turn-based Strategy game using **Next.js 14** and **TypeScript**, ensuring strict type safety and code maintainability.",
+        "Architected a modular codebase by decoupling complex game logic (Battle System, Enemy AI) from UI components using Custom React Hooks.",
+        "Designed a centralized static data layer (/data/db) for game balance management and utilized API Routes for data persistence.",
+        "Implemented complex state management for character customization, equipment loadouts, and card deck building without external game engines."
+      ],
+      img: "images/thunder_project.png"
+    },
+
     {
       title: "AI-Powered Stock Sentiment & Prediction Bot",
-      link: "/project/Analysis-news", 
+      link: "/project/Analysis-news",
       github: "https://github.com/water50m/Analysis-News",
       tech: ["Python", "GitHub Actions", "Gemini / OpenAI", "Supabase", "Line API"],
       highlight: true,
@@ -155,7 +184,7 @@ export const resumeData = {
     {
       title: "Real-time AMR Dashboard & LiDAR Visualizer",
       link: "/project/Robot-visualizer",
-      github: "https://github.com/water50m/UI-robot-control", 
+      github: "https://github.com/water50m/UI-robot-control",
       tech: ["React", "TypeScript", "HTML5 Canvas", "Tailwind CSS", "WebSocket"],
       highlight: true,
       developmentStatus: "🚀 Active: ปรับปรุงระบบ Render Performance และเพิ่มฟีเจอร์ Path Tracking",
@@ -165,11 +194,11 @@ export const resumeData = {
         "Optimized rendering performance by decoupling **Logic Layers** (Hooks) from **Presentation Layers** (Canvas/DOM), ensuring smooth 60fps animations.",
         "Developed a **Custom Event Bus** system to manage global state actions like map clearing and resetting without prop-drilling complexity.",
       ],
-      img:"images/ui-robot.png",
+      img: "images/ui-robot.png",
     },
     {
       title: "AI Computer Vision System",
-      github:"",
+      github: "",
       tech: ["Python", "OpenCV", "PyTorch"],
       highlight: false,
       description: [
@@ -178,7 +207,7 @@ export const resumeData = {
       ],
     }
   ],
-  
+
   education: {
     degree: "Bachelor of Engineering in Computer Engineering",
     university: "Naresuan university",

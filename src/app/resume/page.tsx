@@ -18,7 +18,7 @@ const RESUME_DATA = {
     skillsTitle: "Technical Skills",
     experience: [
       {
-        role: "Software Developer Intern", 
+        role: "Software Developer Intern",
         company: "Eternelle Co., Ltd.",
         period: "Apr 2025 – May 2025",
         points: [
@@ -30,7 +30,7 @@ const RESUME_DATA = {
       {
         role: "Full Stack Developer Intern",
         company: "Faculty of Medical Science, Naresuan University",
-        period: "Nov 2023 - Nov 2024 (Project Delivery)", 
+        period: "Nov 2023 - Nov 2024 (Project Delivery)",
         points: [
           "Learned to bridge user requirements with technical solutions by digitizing manual tracking via **PHP** and **MySQL**.",
           "Explored **Geospatial Data Visualization** using **Leaflet.js**, improving strategic planning through interactive mapping.",
@@ -39,6 +39,24 @@ const RESUME_DATA = {
       }
     ],
     projects: [
+      {
+        title: "English Vocabulary Card Game Platform",
+        tech: "Next.js 16, TypeScript, PostgreSQL, Tailwind CSS, Framer Motion, Docker",
+        points: [
+          "Built a full-stack vocabulary learning platform with quiz modes, XP, streaks, mastery tracking, and dashboard analytics.",
+          "Implemented JWT/PIN authentication and admin tools for managing users, vocabulary, story cards, and CSV imports.",
+          "Designed a responsive multi-theme UI using Tailwind CSS, CSS variables, and Framer Motion to create an engaging learning experience."
+        ]
+      },
+      {
+        title: "Personal Task and Daily Checklist Management Platform",
+        tech: "Next.js 16, React 19, TypeScript, PostgreSQL, Tailwind CSS 4, Docker",
+        points: [
+          "Built a full-stack productivity platform with task management, daily checklist tracking, appointment scheduling, and calendar views.",
+          "Implemented PIN-based authentication, PostgreSQL data models, recurring checklist rules, category/tag organization, and dashboard analytics.",
+          "Designed a responsive Thai-language interface with reusable components, progress charts, filters, modals, and Docker-ready production deployment."
+        ]
+      },
       {
         title: "Enterprise-Grade Home Lab Infrastructure",
         tech: "Docker, Linux, Cloudflare, Tailscale",
@@ -98,7 +116,7 @@ const RESUME_DATA = {
     skillsTitle: "ทักษะทางเทคนิค",
     experience: [
       {
-        role: "นักศึกษาฝึกงานซอฟต์แวร์", 
+        role: "นักศึกษาฝึกงานซอฟต์แวร์",
         company: "บริษัท อีเทอเนลเล่ จำกัด",
         period: "เม.ย. 2568 – พ.ค. 2568",
         points: [
@@ -110,7 +128,7 @@ const RESUME_DATA = {
       {
         role: "นักศึกษาฝึกงานฟูลสแต็ก",
         company: "คณะวิทยาศาสตร์การแพทย์ มหาวิทยาลัยนเรศวร",
-        period: "พ.ย. 2566 - พ.ย. 2567 (ส่งมอบโปรเจกต์)", 
+        period: "พ.ย. 2566 - พ.ย. 2567 (ส่งมอบโปรเจกต์)",
         points: [
           "เรียนรู้การแปลงความต้องการของผู้ใช้ให้เป็นโซลูชันทางเทคนิค โดยการเปลี่ยนระบบติดตามการฝึกงานแบบเดิมให้เป็นดิจิทัลด้วย **PHP** และ **MySQL**",
           "ศึกษาการจัดการข้อมูล **Geospatial** ด้วย **Leaflet.js** เพื่อช่วยในการวางแผนกลยุทธ์ผ่านแผนที่แบบโต้ตอบ",
@@ -119,6 +137,24 @@ const RESUME_DATA = {
       }
     ],
     projects: [
+      {
+        title: "แพลตฟอร์มเกมการ์ดเรียนรู้คำศัพท์ภาษาอังกฤษ",
+        tech: "Next.js 16, TypeScript, PostgreSQL, Tailwind CSS, Framer Motion, Docker",
+        points: [
+          "พัฒนาแพลตฟอร์มเรียนรู้คำศัพท์แบบ Full-stack พร้อมโหมดแบบทดสอบ, XP, streak, ระบบ mastery และ dashboard แสดงสถิติ",
+          "สร้างระบบยืนยันตัวตนด้วย JWT/PIN และเครื่องมือผู้ดูแลระบบสำหรับจัดการผู้ใช้ คำศัพท์ story cards และการนำเข้า CSV",
+          "ออกแบบ UI แบบ responsive ที่รองรับหลายธีมด้วย Tailwind CSS, CSS variables และ Framer Motion"
+        ]
+      },
+      {
+        title: "แพลตฟอร์มจัดการงานส่วนตัวและ Daily Checklist",
+        tech: "Next.js 16, React 19, TypeScript, PostgreSQL, Tailwind CSS 4, Docker",
+        points: [
+          "พัฒนาเว็บแอปแบบ Full-stack สำหรับจัดการงานประจำวัน, Daily Checklist, นัดหมาย และปฏิทินรวมในระบบเดียว",
+          "ออกแบบระบบเข้าสู่ระบบด้วย PIN, โครงสร้างฐานข้อมูล PostgreSQL, การตั้งค่างานซ้ำ, หมวดหมู่, แท็ก และ Dashboard วิเคราะห์ความคืบหน้า",
+          "สร้าง UI ภาษาไทยแบบ Responsive พร้อม reusable components, กราฟความคืบหน้า, ตัวกรองข้อมูล, modal และรองรับการ deploy ด้วย Docker"
+        ]
+      },
       {
         title: "โครงสร้างพื้นฐาน Home Lab ระดับองค์กร",
         tech: "Docker, Linux, Cloudflare, Tailscale",
@@ -171,7 +207,7 @@ const RESUME_DATA = {
 
 const COMMON_CONTACT = {
   email: "pmachaopa1@gmail.com",
-  tel: "(+66) 65-815-1150", 
+  tel: "(+66) 65-815-1150",
   location: "Phitsanulok, Thailand",
   github: "water50m",
   githubUrl: "https://github.com/water50m",
@@ -195,13 +231,13 @@ export default function ResumePage() {
     <main className="min-h-screen bg-gray-100 py-5 print:bg-white print:p-0">
       {/* Floating Buttons */}
       <div className="fixed bottom-5 right-5 flex flex-col gap-3 print:hidden z-50">
-        <button 
+        <button
           onClick={() => setLang(lang === 'en' ? 'th' : 'en')}
           className="bg-blue-600 text-white px-4 py-2 rounded-full shadow-lg hover:bg-blue-700 transition flex items-center gap-2 text-sm"
         >
           <Languages size={16} /> {lang === 'en' ? 'ภาษาไทย' : 'English'}
         </button>
-        <button 
+        <button
           onClick={() => window.print()}
           className="bg-black text-white px-4 py-2 rounded-full shadow-lg hover:bg-gray-800 transition flex items-center gap-2 text-sm"
         >
@@ -211,7 +247,7 @@ export default function ResumePage() {
 
       {/* A4 Page Container */}
       <div className="w-[210mm] mx-auto bg-white shadow-xl p-8 min-h-[297mm] print:shadow-none print:w-full print:h-full print:p-6 text-gray-800">
-        
+
         {/* --- Header --- */}
         <header className="border-b-2 border-gray-900 pb-2 mb-2">
           <div className="flex justify-between items-end">
@@ -220,7 +256,7 @@ export default function ResumePage() {
               <p className="text-lg font-medium text-gray-600 mt-1">{d.title}</p>
             </div>
           </div>
-          
+
           <div className="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-xs text-gray-600 font-medium">
             <a href={`mailto:${COMMON_CONTACT.email}`} className="flex items-center gap-1 hover:text-black">
               <Mail size={12} /> {COMMON_CONTACT.email}
@@ -236,13 +272,13 @@ export default function ResumePage() {
             </Link>
             <div className="flex items-center gap-1 hover:text-black">
               <Link href={COMMON_CONTACT.portfolioUrl} className="flex items-center gap-1 hover:text-black" target="_blank">
-                <Globe size={12} /> 
+                <Globe size={12} />
               </Link>
               portfolio: {COMMON_CONTACT.portfolio}
             </div>
             <div className="flex items-center gap-1 hover:text-black">
               <Link href={COMMON_CONTACT.portfolioUrl} >
-                <Globe size={12} /> 
+                <Globe size={12} />
               </Link>
               resume: {COMMON_CONTACT.resumeUrl}
             </div>
