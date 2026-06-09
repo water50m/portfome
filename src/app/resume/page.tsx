@@ -9,7 +9,7 @@ import { summary } from 'framer-motion/client';
 const RESUME_DATA = {
   en: {
     name: "PARINYA MACHAOPA",
-    title: "AI Engineer & Full Stack Developer",
+    title: "Computer Engineering",
     // summary: "Full-Stack AI Engineer with expertise in AI Solutions (Computer Vision & LLMs) and Infrastructure. Experienced in designing complex database schemas for enterprise HR systems and deploying secure, high-performance web applications using Next.js and Docker. Proven ability to digitize manual workflows and solve data scarcity problems via synthetic data generation.",
     summary: "Results-driven Full-Stack Developer experienced in designing and engineering high-performance web systems, from UI implementation to complex database architecture. Skilled in modern web technologies and secure infrastructure deployment. Brings an innovative edge with practical knowledge in AI integration, particularly in Computer Vision and LLMs, to enhance application capabilities and automate workflows.",
     experienceTitle: "Work Experience",
@@ -107,7 +107,7 @@ const RESUME_DATA = {
   },
   th: {
     name: "ปริญญา มาชาวป่า",
-    title: "วิศวกรเอไอ และนักพัฒนาเว็บแบบฟูลสแต็ก",
+    title: "วิศวกรรมคอมพิวเตอร์",
     // summary: "วิศวกร AI แบบ Full-Stack ที่มีความเชี่ยวชาญด้านโซลูชัน AI (Computer Vision & LLMs) และโครงสร้างพื้นฐาน มีประสบการณ์ในการออกแบบฐานข้อมูลที่ซับซ้อนสำหรับระบบ HR ระดับองค์กร และการปรับใช้เว็บแอปพลิเคชันประสิทธิภาพสูงที่มีความปลอดภัยสูงด้วย Next.js และ Docker มีความสามารถในการเปลี่ยนขั้นตอนการทำงานแบบดั้งเดิมให้เป็นระบบดิจิทัล และแก้ปัญหาการขาดแคลนข้อมูลด้วยการสร้างข้อมูลสังเคราะห์ (Synthetic Data)",
     summary: "นักพัฒนาเว็บแบบ Full-Stack ที่มีความเชี่ยวชาญในการออกแบบและพัฒนาระบบเว็บที่มีประสิทธิภาพสูง ตั้งแต่การสร้างส่วนติดต่อผู้ใช้ไปจนถึงการออกแบบฐานข้อมูลที่ซับซ้อน มีทักษะในการใช้เทคโนโลยีเว็บสมัยใหม่และการปรับใช้โครงสร้างพื้นฐานที่ปลอดภัย พร้อมด้วยความรู้ด้านการผสานรวม AI โดยเฉพาะในด้าน Computer Vision และ LLMs เพื่อเพิ่มขีดความสามารถของแอปพลิเคชันและทำให้กระบวนการทำงานเป็นอัตโนมัติ",
     experienceTitle: "ประสบการณ์การทำงาน",
@@ -365,3 +365,4 @@ export default function ResumePage() {
     </main>
   );
 }
+
