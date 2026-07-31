@@ -3,7 +3,7 @@
 export const resumeData = {
   personalInfo: {
     name: "PARINYA MACHAOPA",
-    title: "AI Engineer & Full Stack Developer",
+    title: "Web Developer | SEO & Marketing Analytics",
     email: "pmachaopa1@gmail.com",
     phone: "+668151150",
     location: "phitsanulok, Thailand", // หรือจังหวัดของคุณ
@@ -11,7 +11,7 @@ export const resumeData = {
     github: "github.com/water50m",
     portfolio: "🔴 [your-portfolio-url.com]",
   },
-  summary: "Results-driven Full-Stack Developer experienced in designing and engineering high-performance web systems, from UI implementation to complex database architecture. Skilled in modern web technologies and secure infrastructure deployment. Brings an innovative edge with practical knowledge in AI integration, particularly in Computer Vision and LLMs, to enhance application capabilities and automate workflows.",
+  summary: "Full-Stack Web Developer and Computer Engineering student interested in building business-focused websites and landing pages that are clear, responsive, and measurable. Experienced with Next.js, TypeScript, UX/UI implementation, technical SEO, event tracking, and consent-aware GA4, Facebook Pixel, and TikTok Pixel integrations. Interested in developing further in Ads Optimize and Web Designer roles by connecting web experiences with data and conversion insights.",
 
   skills: [
 
@@ -21,7 +21,11 @@ export const resumeData = {
     },
     {
       category: "Web Development",
-      items: ["Next.js", "React", "TypeScript", "Node.js", "Tailwind CSS"],
+      items: ["Next.js", "React", "TypeScript", "HTML/CSS", "Node.js", "Tailwind CSS"],
+    },
+    {
+      category: "SEO & Marketing Analytics",
+      items: ["Technical SEO", "JSON-LD", "GA4", "Facebook Pixel", "TikTok Pixel", "Event Tracking", "PDPA Consent"],
     },
     {
       category: "Database",
@@ -52,6 +56,19 @@ export const resumeData = {
   ],
 
   projects: [
+    {
+      title: "BUZZ iPhone E-commerce & Marketing Analytics Platform",
+      link: "",
+      github: "",
+      tech: ["Next.js", "TypeScript", "PostgreSQL", "SEO", "GA4", "Facebook Pixel", "TikTok Pixel"],
+      highlight: true,
+      description: [
+        "Built a business-focused e-commerce storefront and admin dashboard with product catalog, promotions, cart, order flow, and content management features.",
+        "Implemented technical and local SEO foundations including SSR, dynamic metadata, sitemap/robots, and JSON-LD for Product, Offer, LocalBusiness, and BreadcrumbList.",
+        "Integrated consent-aware **GA4, Facebook Pixel, and TikTok Pixel** tracking for ViewContent, AddToCart, InitiateCheckout, and Lead events to support future ad optimization.",
+        "Designed first-party funnel analytics for visitor/session attribution, product impressions, CTR, and gallery engagement while respecting PDPA consent requirements."
+      ],
+    },
     {
       title: "Medical Science Internship Mapping System",
       link: "",

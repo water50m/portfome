@@ -3,15 +3,13 @@
 import React, { useState } from 'react';
 import { Mail, Github, MapPin, Globe, Phone, Printer, Languages } from 'lucide-react';
 import Link from 'next/link';
-import { summary } from 'framer-motion/client';
 
 // --- Configuration / Data (Multi-language) ---
 const RESUME_DATA = {
   en: {
     name: "PARINYA MACHAOPA",
-    title: "Computer Engineering",
-    // summary: "Full-Stack AI Engineer with expertise in AI Solutions (Computer Vision & LLMs) and Infrastructure. Experienced in designing complex database schemas for enterprise HR systems and deploying secure, high-performance web applications using Next.js and Docker. Proven ability to digitize manual workflows and solve data scarcity problems via synthetic data generation.",
-    summary: "Results-driven Full-Stack Developer experienced in designing and engineering high-performance web systems, from UI implementation to complex database architecture. Skilled in modern web technologies and secure infrastructure deployment. Brings an innovative edge with practical knowledge in AI integration, particularly in Computer Vision and LLMs, to enhance application capabilities and automate workflows.",
+    title: "Web Developer | SEO & Marketing Analytics",
+    summary: "Computer Engineering student and Full-Stack Web Developer who enjoys building business-focused websites and landing pages that are clear, responsive, and measurable. Hands-on experience with Next.js, TypeScript, UX/UI implementation, technical SEO, event tracking, and consent-aware GA4/Facebook Pixel/TikTok Pixel integrations. Interested in growing as an Ads Optimize / Web Designer by connecting creative web experiences with data and conversion insights.",
     experienceTitle: "Work Experience",
     projectTitle: "Key Projects",
     educationTitle: "Education",
@@ -40,6 +38,16 @@ const RESUME_DATA = {
     ],
     projects: [
       {
+        title: "BUZZ iPhone E-commerce & Marketing Analytics Platform",
+        tech: "Next.js, TypeScript, PostgreSQL, SEO, GA4, Facebook Pixel, TikTok Pixel",
+        points: [
+          "Built a business-focused e-commerce storefront and admin dashboard with product catalog, promotions, cart, order flow, and content management features.",
+          "Implemented technical and local SEO foundations including SSR, dynamic metadata, sitemap/robots, and JSON-LD for Product, Offer, LocalBusiness, and BreadcrumbList.",
+          "Integrated consent-aware **GA4, Facebook Pixel, and TikTok Pixel** tracking for ViewContent, AddToCart, InitiateCheckout, and Lead events to support future ad optimization.",
+          "Designed first-party funnel analytics for visitor/session attribution, product impressions, CTR, and gallery engagement while respecting PDPA consent requirements."
+        ]
+      },
+      {
         title: "English Vocabulary Card Game Platform",
         tech: "Next.js 16, TypeScript, PostgreSQL, Tailwind CSS, Framer Motion, Docker",
         points: [
@@ -55,14 +63,6 @@ const RESUME_DATA = {
           "Built a full-stack productivity platform with task management, daily checklist tracking, appointment scheduling, and calendar views.",
           "Implemented PIN-based authentication, PostgreSQL data models, recurring checklist rules, category/tag organization, and dashboard analytics.",
           "Designed a responsive Thai-language interface with reusable components, progress charts, filters, modals, and Docker-ready production deployment."
-        ]
-      },
-      {
-        title: "Enterprise-Grade Home Lab Infrastructure",
-        tech: "Docker, Linux, Cloudflare, Tailscale",
-        points: [
-          "Navigated complex **Network Security** challenges by self-hosting microservices via **VPN Mesh**, avoiding public exposure.",
-          "Gained hands-on experience in **Systems Administration** and DNS management for robust remote access."
         ]
       },
       {
@@ -82,22 +82,6 @@ const RESUME_DATA = {
       //     "Explored **Real-time Inference** on video streams, focusing on the accuracy of detection in low-quality surveillance environments."
       //   ]
       // },
-      {
-        title: "Epic Card Battle RPG",
-        tech: "Next.js 14, TypeScript, Tailwind CSS",
-        points: [
-          "Mastered **Advanced State Management** and decoupled architecture, learning to manage complex game logic without external engines.",
-          "Deepened **Type Safety** knowledge through strict TypeScript patterns to ensure code maintainability."
-        ]
-      },
-      {
-        title: "AI-Powered Stock Sentiment Bot",
-        tech: "Python, LLMs (Gemini/GPT-4), Supabase",
-        points: [
-          "Explored **Prompt Engineering** and **LLM Orchestration**, learning to optimize token costs while maintaining analysis quality.",
-          "Learned to automate lifecycle tasks (CI/CD) using **GitHub Actions** for real-time market data."
-        ]
-      }
     ],
     education: {
       degree: "Bachelor of Engineering in Computer Engineering",
@@ -107,9 +91,8 @@ const RESUME_DATA = {
   },
   th: {
     name: "ปริญญา มาชาวป่า",
-    title: "วิศวกรรมคอมพิวเตอร์",
-    // summary: "วิศวกร AI แบบ Full-Stack ที่มีความเชี่ยวชาญด้านโซลูชัน AI (Computer Vision & LLMs) และโครงสร้างพื้นฐาน มีประสบการณ์ในการออกแบบฐานข้อมูลที่ซับซ้อนสำหรับระบบ HR ระดับองค์กร และการปรับใช้เว็บแอปพลิเคชันประสิทธิภาพสูงที่มีความปลอดภัยสูงด้วย Next.js และ Docker มีความสามารถในการเปลี่ยนขั้นตอนการทำงานแบบดั้งเดิมให้เป็นระบบดิจิทัล และแก้ปัญหาการขาดแคลนข้อมูลด้วยการสร้างข้อมูลสังเคราะห์ (Synthetic Data)",
-    summary: "นักพัฒนาเว็บแบบ Full-Stack ที่มีความเชี่ยวชาญในการออกแบบและพัฒนาระบบเว็บที่มีประสิทธิภาพสูง ตั้งแต่การสร้างส่วนติดต่อผู้ใช้ไปจนถึงการออกแบบฐานข้อมูลที่ซับซ้อน มีทักษะในการใช้เทคโนโลยีเว็บสมัยใหม่และการปรับใช้โครงสร้างพื้นฐานที่ปลอดภัย พร้อมด้วยความรู้ด้านการผสานรวม AI โดยเฉพาะในด้าน Computer Vision และ LLMs เพื่อเพิ่มขีดความสามารถของแอปพลิเคชันและทำให้กระบวนการทำงานเป็นอัตโนมัติ",
+    title: "นักพัฒนาเว็บ | SEO และ Marketing Analytics",
+    summary: "นักศึกษาวิศวกรรมคอมพิวเตอร์และนักพัฒนาเว็บแบบ Full-stack ที่สนุกกับการสร้างเว็บไซต์และ Landing Page ที่สวย ใช้งานง่าย และวัดผลได้ มีประสบการณ์จริงกับ Next.js, TypeScript, UX/UI, Technical SEO, Event Tracking และการเชื่อมต่อ GA4, Facebook Pixel, TikTok Pixel แบบคำนึงถึง Consent/PDPA สนใจเติบโตในสาย Ads Optimize และ Web Designer โดยตั้งใจพัฒนาตัวเองต่อด้านการวิเคราะห์ผลโฆษณา การทำ Conversion Tracking และการสร้างเว็บไซต์เพื่อการตลาด",
     experienceTitle: "ประสบการณ์การทำงาน",
     projectTitle: "โปรเจกต์ที่สำคัญ",
     educationTitle: "การศึกษา",
@@ -138,6 +121,16 @@ const RESUME_DATA = {
     ],
     projects: [
       {
+        title: "BUZZ iPhone E-commerce & Marketing Analytics Platform",
+        tech: "Next.js, TypeScript, PostgreSQL, SEO, GA4, Facebook Pixel, TikTok Pixel",
+        points: [
+          "พัฒนาเว็บ E-commerce และ Admin Dashboard สำหรับธุรกิจจริง มีระบบสินค้า โปรโมชั่น ตะกร้า ขั้นตอนสั่งซื้อ และจัดการคอนเทนต์",
+          "วางโครงสร้าง **Technical SEO และ Local SEO** ด้วย SSR, Dynamic Metadata, Sitemap/Robots และ JSON-LD สำหรับ Product, Offer, LocalBusiness และ BreadcrumbList",
+          "เชื่อมต่อระบบวัดผลแบบคำนึงถึง Consent ด้วย **GA4, Facebook Pixel และ TikTok Pixel** พร้อม Event สำคัญ เช่น ViewContent, AddToCart, InitiateCheckout และ Lead เพื่อรองรับการทำโฆษณาและ Optimize ในอนาคต",
+          "ออกแบบ First-party Analytics สำหรับวัด Visitor/Session Attribution, Product Impression, CTR และ Gallery Engagement โดยคำนึงถึงข้อกำหนด PDPA"
+        ]
+      },
+      {
         title: "แพลตฟอร์มเกมการ์ดเรียนรู้คำศัพท์ภาษาอังกฤษ",
         tech: "Next.js 16, TypeScript, PostgreSQL, Tailwind CSS, Framer Motion, Docker",
         points: [
@@ -153,14 +146,6 @@ const RESUME_DATA = {
           "พัฒนาเว็บแอปแบบ Full-stack สำหรับจัดการงานประจำวัน, Daily Checklist, นัดหมาย และปฏิทินรวมในระบบเดียว",
           "ออกแบบระบบเข้าสู่ระบบด้วย PIN, โครงสร้างฐานข้อมูล PostgreSQL, การตั้งค่างานซ้ำ, หมวดหมู่, แท็ก และ Dashboard วิเคราะห์ความคืบหน้า",
           "สร้าง UI ภาษาไทยแบบ Responsive พร้อม reusable components, กราฟความคืบหน้า, ตัวกรองข้อมูล, modal และรองรับการ deploy ด้วย Docker"
-        ]
-      },
-      {
-        title: "โครงสร้างพื้นฐาน Home Lab ระดับองค์กร",
-        tech: "Docker, Linux, Cloudflare, Tailscale",
-        points: [
-          "จัดการความท้าทายด้าน **Network Security** โดยการโฮสต์ Microservices ผ่าน **VPN Mesh** เพื่อหลีกเลี่ยงการเปิดช่องโหว่สู่สาธารณะ",
-          "ได้รับประสบการณ์ตรงด้าน **Systems Administration** และการจัดการ DNS สำหรับการเข้าถึงจากระยะไกลที่มีความเสถียร"
         ]
       },
       // {
@@ -180,22 +165,6 @@ const RESUME_DATA = {
           "เชื่อมต่อระบบยืนยันตัวตนระดับองค์กรด้วย **LDAP Authentication** และออกแบบหน้าต่าง UI ที่รองรับนโยบาย **PDPA** เพื่อรักษาความปลอดภัยและความเป็นส่วนตัวของข้อมูลผู้ใช้งาน"
         ]
       },
-      {
-        title: "Epic Card Battle RPG",
-        tech: "Next.js 14, TypeScript, Tailwind CSS",
-        points: [
-          "เชี่ยวชาญการจัดการ **State ระดับสูง** และสถาปัตยกรรมแบบ Decoupled เรียนรู้การจัดการ Logic ของเกมที่ซับซ้อนโดยไม่ใช้ Game Engine",
-          "เพิ่มพูนความรู้ด้าน **Type Safety** ผ่านรูปแบบ TypeScript ขั้นสูงเพื่อให้โค้ดดูแลรักษาง่ายในระยะยาว"
-        ]
-      },
-      {
-        title: "บอทวิเคราะห์หุ้นด้วย AI",
-        tech: "Python, LLMs (Gemini/GPT-4), Supabase",
-        points: [
-          "ศึกษาด้าน **Prompt Engineering** และการจัดการ **LLM Orchestration** เรียนรู้วิธีลดต้นทุน API ในขณะที่ยังรักษาคุณภาพการวิเคราะห์ไว้ได้",
-          "เรียนรู้การทำงานแบบอัตโนมัติ (CI/CD) ด้วย **GitHub Actions** สำหรับการดึงข้อมูลตลาดแบบ Real-time"
-        ]
-      }
     ],
     education: {
       degree: "วิศวกรรมศาสตรบัณฑิต สาขาวิชาวิศวกรรมคอมพิวเตอร์",
@@ -218,9 +187,9 @@ const COMMON_CONTACT = {
 
 const SKILLS = {
   languages: ["Python", "TypeScript", "SQL (MSSQL/MySQL)", "PHP", "C++"],
-  frameworks: ["Next.js", "React", "Tailwind CSS", "PyTorch", "OpenCV", "YOLOv8"],
+  frameworks: ["Next.js", "React", "HTML/CSS", "Tailwind CSS", "Node.js"],
   infrastructure: ["Docker", "Linux (Debian)", "Cloudflare", "Tailscale", "Git/GitHub Actions"],
-  tools: ["Microsoft SQL Server", "Supabase", "PostgreSQL", "Figma"]
+  tools: ["Figma", "SEO / JSON-LD", "GA4", "Facebook Pixel", "TikTok Pixel", "Event Tracking", "PDPA Consent"]
 };
 
 export default function ResumePage() {
