@@ -86,7 +86,7 @@ const RESUME_DATA = {
     education: {
       degree: "Bachelor of Engineering in Computer Engineering",
       university: "Naresuan University",
-      year: "Fifth-year student · Class on Tuesdays; available other days"
+      year: "Graduating 2026"
     }
   },
   th: {
@@ -169,7 +169,7 @@ const RESUME_DATA = {
     education: {
       degree: "วิศวกรรมศาสตรบัณฑิต สาขาวิชาวิศวกรรมคอมพิวเตอร์",
       university: "มหาวิทยาลัยนเรศวร",
-      year: "นักศึกษาปี 5 · เรียนวันอังคาร; ทำงานได้วันอื่น"
+      year: "จบการศึกษาปี 2569"
     }
   }
 };
