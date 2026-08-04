@@ -9,7 +9,7 @@ const RESUME_DATA = {
   en: {
     name: "PARINYA MACHAOPA",
     title: "Web Developer | SEO & Marketing Analytics",
-    summary: "Computer Engineering student and Full-Stack Web Developer who enjoys building business-focused websites and landing pages that are clear, responsive, and measurable. Hands-on experience with Next.js, TypeScript, UX/UI implementation, technical SEO, event tracking, and consent-aware GA4/Facebook Pixel/TikTok Pixel integrations. Interested in growing as an Ads Optimize / Web Designer by connecting creative web experiences with data and conversion insights.",
+    summary: "Computer Engineering student and web developer interested in building websites and landing pages that help businesses communicate clearly and guide customers toward contact or purchase. I enjoy thinking about customer journeys, content structure, SEO, and measurement, and I am developing toward Web Designer and Ads Optimize roles by connecting user experience with marketing goals.",
     experienceTitle: "Work Experience",
     projectTitle: "Key Projects",
     educationTitle: "Education",
@@ -57,15 +57,6 @@ const RESUME_DATA = {
         ]
       },
       {
-        title: "Personal Task and Daily Checklist Management Platform",
-        tech: "Next.js 16, React 19, TypeScript, PostgreSQL, Tailwind CSS 4, Docker",
-        points: [
-          "Built a full-stack productivity platform with task management, daily checklist tracking, appointment scheduling, and calendar views.",
-          "Implemented PIN-based authentication, PostgreSQL data models, recurring checklist rules, category/tag organization, and dashboard analytics.",
-          "Designed a responsive Thai-language interface with reusable components, progress charts, filters, modals, and Docker-ready production deployment."
-        ]
-      },
-      {
         title: "Faculty Personnel & Budget Management System (FPA)",
         tech: "PHP, MySQL, LDAP, UI/UX Design",
         points: [
@@ -92,7 +83,7 @@ const RESUME_DATA = {
   th: {
     name: "ปริญญา มาชาวป่า",
     title: "นักพัฒนาเว็บ | SEO และ Marketing Analytics",
-    summary: "นักศึกษาวิศวกรรมคอมพิวเตอร์และนักพัฒนาเว็บแบบ Full-stack ที่สนุกกับการสร้างเว็บไซต์และ Landing Page ที่สวย ใช้งานง่าย และวัดผลได้ มีประสบการณ์จริงกับ Next.js, TypeScript, UX/UI, Technical SEO, Event Tracking และการเชื่อมต่อ GA4, Facebook Pixel, TikTok Pixel แบบคำนึงถึง Consent/PDPA สนใจเติบโตในสาย Ads Optimize และ Web Designer โดยตั้งใจพัฒนาตัวเองต่อด้านการวิเคราะห์ผลโฆษณา การทำ Conversion Tracking และการสร้างเว็บไซต์เพื่อการตลาด",
+    summary: "นักศึกษาวิศวกรรมคอมพิวเตอร์และนักพัฒนาเว็บที่สนใจสร้างเว็บไซต์และ Landing Page ให้ธุรกิจสื่อสารจุดขายได้ชัดเจน และช่วยพาลูกค้าไปสู่การติดต่อหรือสั่งซื้อ ผมชอบคิดจากเส้นทางของลูกค้า การจัดวางเนื้อหา SEO และการวัดผล พร้อมพัฒนาตัวเองต่อในสาย Web Designer และ Ads Optimize โดยเชื่อมประสบการณ์ผู้ใช้เข้ากับเป้าหมายทางการตลาด",
     experienceTitle: "ประสบการณ์การทำงาน",
     projectTitle: "โปรเจกต์ที่สำคัญ",
     educationTitle: "การศึกษา",
@@ -137,15 +128,6 @@ const RESUME_DATA = {
           "พัฒนาแพลตฟอร์มเรียนรู้คำศัพท์แบบ Full-stack พร้อมโหมดแบบทดสอบ, XP, streak, ระบบ mastery และ dashboard แสดงสถิติ",
           "สร้างระบบยืนยันตัวตนด้วย JWT/PIN และเครื่องมือผู้ดูแลระบบสำหรับจัดการผู้ใช้ คำศัพท์ story cards และการนำเข้า CSV",
           "ออกแบบ UI แบบ responsive ที่รองรับหลายธีมด้วย Tailwind CSS, CSS variables และ Framer Motion"
-        ]
-      },
-      {
-        title: "แพลตฟอร์มจัดการงานส่วนตัวและ Daily Checklist",
-        tech: "Next.js 16, React 19, TypeScript, PostgreSQL, Tailwind CSS 4, Docker",
-        points: [
-          "พัฒนาเว็บแอปแบบ Full-stack สำหรับจัดการงานประจำวัน, Daily Checklist, นัดหมาย และปฏิทินรวมในระบบเดียว",
-          "ออกแบบระบบเข้าสู่ระบบด้วย PIN, โครงสร้างฐานข้อมูล PostgreSQL, การตั้งค่างานซ้ำ, หมวดหมู่, แท็ก และ Dashboard วิเคราะห์ความคืบหน้า",
-          "สร้าง UI ภาษาไทยแบบ Responsive พร้อม reusable components, กราฟความคืบหน้า, ตัวกรองข้อมูล, modal และรองรับการ deploy ด้วย Docker"
         ]
       },
       // {
