@@ -9,7 +9,7 @@ const RESUME_DATA = {
   en: {
     name: "PARINYA MACHAOPA",
     title: "Web Developer | SEO & Marketing Analytics",
-    summary: "Computer Engineering student and web developer interested in building websites and landing pages that help businesses communicate clearly and guide customers toward contact or purchase. I enjoy thinking about customer journeys, content structure, SEO, and measurement, and I am developing toward Web Designer and Ads Optimize roles by connecting user experience with marketing goals.",
+    summary: "Computer Engineering student and web developer interested in building websites and landing pages that help businesses communicate clearly and guide customers toward contact or purchase. I understand SEO structure and content, and how to map Facebook/TikTok Pixel events to the customer journey from product views and add-to-cart through checkout and leads. I am developing toward Web Designer and Ads Optimize roles by connecting user experience with marketing goals.",
     experienceTitle: "Work Experience",
     projectTitle: "Key Projects",
     educationTitle: "Education",
@@ -43,7 +43,7 @@ const RESUME_DATA = {
         points: [
           "Built a business-focused e-commerce storefront and admin dashboard with product catalog, promotions, cart, order flow, and content management features.",
           "Implemented technical and local SEO foundations including SSR, dynamic metadata, sitemap/robots, and JSON-LD for Product, Offer, LocalBusiness, and BreadcrumbList.",
-          "Integrated consent-aware **GA4, Facebook Pixel, and TikTok Pixel** tracking for ViewContent, AddToCart, InitiateCheckout, and Lead events to support future ad optimization.",
+          "Mapped consent-aware **GA4, Facebook Pixel, and TikTok Pixel** events to the customer journey—from product views and add-to-cart through checkout and leads—so marketing performance can be measured and improved.",
           "Designed first-party funnel analytics for visitor/session attribution, product impressions, CTR, and gallery engagement while respecting PDPA consent requirements."
         ]
       },
@@ -83,7 +83,7 @@ const RESUME_DATA = {
   th: {
     name: "ปริญญา มาชาวป่า",
     title: "นักพัฒนาเว็บ | SEO และ Marketing Analytics",
-    summary: "นักศึกษาวิศวกรรมคอมพิวเตอร์และนักพัฒนาเว็บที่สนใจสร้างเว็บไซต์และ Landing Page ให้ธุรกิจสื่อสารจุดขายได้ชัดเจน และช่วยพาลูกค้าไปสู่การติดต่อหรือสั่งซื้อ ผมชอบคิดจากเส้นทางของลูกค้า การจัดวางเนื้อหา SEO และการวัดผล พร้อมพัฒนาตัวเองต่อในสาย Web Designer และ Ads Optimize โดยเชื่อมประสบการณ์ผู้ใช้เข้ากับเป้าหมายทางการตลาด",
+    summary: "นักศึกษาวิศวกรรมคอมพิวเตอร์และนักพัฒนาเว็บที่สนใจสร้างเว็บไซต์และ Landing Page ให้ธุรกิจสื่อสารจุดขายได้ชัดเจน และช่วยพาลูกค้าไปสู่การติดต่อหรือสั่งซื้อ ผมเข้าใจโครงสร้างและการวางเนื้อหาเพื่อ SEO รวมถึงการวาง Event ของ Facebook/TikTok Pixel ให้สอดคล้องกับเส้นทางลูกค้า ตั้งแต่ดูสินค้า เพิ่มลงตะกร้า เริ่มสั่งซื้อ ไปจนถึงการส่งข้อมูลติดต่อ พร้อมพัฒนาตัวเองต่อในสาย Web Designer และ Ads Optimize โดยเชื่อมประสบการณ์ผู้ใช้เข้ากับเป้าหมายทางการตลาด",
     experienceTitle: "ประสบการณ์การทำงาน",
     projectTitle: "โปรเจกต์ที่สำคัญ",
     educationTitle: "การศึกษา",
@@ -117,7 +117,7 @@ const RESUME_DATA = {
         points: [
           "พัฒนาเว็บ E-commerce และ Admin Dashboard สำหรับธุรกิจจริง มีระบบสินค้า โปรโมชั่น ตะกร้า ขั้นตอนสั่งซื้อ และจัดการคอนเทนต์",
           "วางโครงสร้าง **Technical SEO และ Local SEO** ด้วย SSR, Dynamic Metadata, Sitemap/Robots และ JSON-LD สำหรับ Product, Offer, LocalBusiness และ BreadcrumbList",
-          "เชื่อมต่อระบบวัดผลแบบคำนึงถึง Consent ด้วย **GA4, Facebook Pixel และ TikTok Pixel** พร้อม Event สำคัญ เช่น ViewContent, AddToCart, InitiateCheckout และ Lead เพื่อรองรับการทำโฆษณาและ Optimize ในอนาคต",
+          "วาง Event ของ **GA4, Facebook Pixel และ TikTok Pixel** ให้สอดคล้องกับเส้นทางลูกค้า ตั้งแต่ดูสินค้า เพิ่มลงตะกร้า เริ่มสั่งซื้อ ไปจนถึง Lead เพื่อวัดผลและนำข้อมูลไปปรับปรุงเว็บไซต์หรือแคมเปญในอนาคต โดยคำนึงถึง Consent/PDPA",
           "ออกแบบ First-party Analytics สำหรับวัด Visitor/Session Attribution, Product Impression, CTR และ Gallery Engagement โดยคำนึงถึงข้อกำหนด PDPA"
         ]
       },
